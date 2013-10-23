@@ -2,6 +2,7 @@
 
 namespace IssetBv\AlfredoLaravel;
 
+use Response;
 use Alfredo\Server;
 use Alfredo\Payload\Pdf\Convert;
 use Alfredo\Payload\Pdf\QueueItem;
@@ -37,6 +38,18 @@ class Alfredo
         } catch (ConversionUnableException $exception) {
             return $exception;
         }
+    }
+
+    public function stream($content)
+    {
+        if ($content instanceof PayloadAbstract) {
+            $content = $this->convert($content);
+        }
+
+        return Response::stream(function() use ($content)
+        {
+            echo $content;
+        }, 200, array('Content-type' => 'application/pdf'));
     }
 
     public function queue(PayloadAbstract $payload)
