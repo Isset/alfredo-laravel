@@ -6,26 +6,31 @@ It will ease a lot of the tasks provided from the Alfredo client.
 The full documentation on Alfredo can be [found here](http://online-pdfconverter.nl/guide)
 
 # Requirements
-*PHP 5.3
+* PHP 5.3
 
 # Installation
 1. Add requirement to composer.json
+
     ```json
     "issetbv/alfredo-laravel": "dev-master"
     ```
 2. Update dependencies
+ 
     ```shell
     composer update
     ```
 3. Publish configuration file
+ 
     ```shell
     php artisan config:publish issetbv/alfredo-laravel
     ```
 4. Add Service Provider to the ```providers``` array in ```app/config/app.php```
+ 
     ```php
     'IssetBv\AlfredoLaravel\AlfredoServiceProvider',
     ```
 5. Add Facade to the ```facades``` array in ```app/config/app.php```
+ 
     ```php
     'Alfredo' => 'IssetBv\AlfredoLaravel\Facade',
     ```
