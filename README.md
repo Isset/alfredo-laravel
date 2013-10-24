@@ -5,7 +5,7 @@ It will ease a lot of the tasks provided from the Alfredo client.
 # Documentation
 The full documentation on Alfredo can be [found here](http://online-pdfconverter.nl/guide)
 # Requirements
-* PHP 5.3
+PHP 5.3
 # Installation
 1. Add requirement to composer.json
     ```json
