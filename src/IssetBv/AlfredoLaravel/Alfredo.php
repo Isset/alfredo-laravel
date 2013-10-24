@@ -31,13 +31,32 @@ class Alfredo
         return $payload;
     }
 
+    public function makePayloadWithCallback($callback)
+    {
+        $payload = $this->makePayload();
+        $payload->setCallback($callback);
+
+        return $payload;
+    }
+
+    public function makePayloadWithSources(array $sources)
+    {
+        $payload = $this->makePayload();
+
+        foreach ($sources as $source => $content) {
+            $method = 'add'.ucfirst($source);
+
+            if (method_exists($payload, $method)) {
+                $payload->$method($content);
+            }
+        }
+
+        return $payload;
+    }
+
     public function convert(PayloadAbstract $payload)
     {
-        try {
-            return $this->server->stream($payload);
-        } catch (ConversionUnableException $exception) {
-            return $exception;
-        }
+        return $this->server->stream($payload);
     }
 
     public function stream($content)
