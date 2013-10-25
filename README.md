@@ -56,10 +56,6 @@ $payload = Alfredo::makePayloadWithConverter('wkhtmltopdf');
 ```php
 $payload = Alfredo::makePayloadWithCallback('http://example.com/callback_url');
 ```
-**Create payload with callback url for queues**
-```php
-$payload = Alfredo::makePayloadWithCallback('http://example.com/callback_url');
-```
 **Create payload with sources**
 
 Available: html, pdf, url
