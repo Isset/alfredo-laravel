@@ -72,6 +72,7 @@ $payload->addHtml('<html><thead></thead><tbody>Converting a payload!</tbody></ht
 $pdf = Alfredo::convert($payload);
 ```
 **Stream a payload or converted payload**
+
 Stream a payload:
 ```php
 $payload = Alfredo::makePayload();
