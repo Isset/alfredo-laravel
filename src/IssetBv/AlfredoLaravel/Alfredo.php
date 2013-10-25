@@ -43,8 +43,9 @@ class Alfredo
     {
         $payload = $this->makePayload();
 
-        foreach ($sources as $source => $content) {
-            $method = 'add'.ucfirst($source);
+        foreach ($sources as $source) {
+            list($name, $content) = $source;
+            $method = 'add'.ucfirst($name);
 
             if (method_exists($payload, $method)) {
                 $payload->$method($content);

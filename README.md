@@ -15,22 +15,22 @@ The full documentation on Alfredo can be [found here](http://online-pdfconverter
     "issetbv/alfredo-laravel": "dev-master"
     ```
 2. Update dependencies
- 
+
     ```shell
     composer update
     ```
 3. Publish configuration file
- 
+
     ```shell
     php artisan config:publish issetbv/alfredo-laravel
     ```
 4. Add Service Provider to the ```providers``` array in ```app/config/app.php```
- 
+
     ```php
     'IssetBv\AlfredoLaravel\AlfredoServiceProvider',
     ```
 5. Add Facade to the ```facades``` array in ```app/config/app.php```
- 
+
     ```php
     'Alfredo' => 'IssetBv\AlfredoLaravel\Facade',
     ```
@@ -65,8 +65,8 @@ $payload = Alfredo::makePayloadWithCallback('http://example.com/callback_url');
 Available: html, pdf, url
 ```php
 $payload = Alfredo::makePayloadWithSources(array(
-    'url'  => 'http://isset.nl',
-    'html' => '<html><thead></thead><tbody>Create payload with sources!</tbody></html>'
+    array('url', 'http://isset.nl'),
+    array('html', '<html><thead></thead><tbody>Create payload with sources!</tbody></html>')
 ));
 ```
 **Convert a payload**
