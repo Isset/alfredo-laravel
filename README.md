@@ -5,22 +5,25 @@ It will ease a lot of the tasks provided from the Alfredo client.
 
 # Table of Contents
 [Documentation](#documentation)
+
 [Installation](#installation)
+
 [Usage](#usage)
-    * [Create payload](#create-payload)
-    * [Add source to payload](#add-source-to-payload)
-    * [Create payload with converter type](#create-payload-with-converter-type)
-    * [Create payload with callback url for queues](#create-payload-with-callback-url-for-queues)
-    * [Create payload with sources](#create-payload-with-sources)
-    * [Convert a payload](#convert-a-payload)
-    * [Stream a payload or converted payload](#stream-a-payload-or-converted-payload)
-    * [Queue a payload](#queue-a-payload)
-    * [Check if a queued payload has been converted](#check-if-a-queued-payload-has-been-converted)
-    * [Get converted payload from queue](#get-converted-payload-from-queue)
-    * [Stream converted payload from queue](#stream-converted-payload-from-queue)
+* [Create payload](#create-payload)
+* [Add source to payload](#add-source-to-payload)
+* [Create payload with converter type](#create-payload-with-converter-type)
+* [Create payload with callback url for queues](#create-payload-with-callback-url-for-queues)
+* [Create payload with sources](#create-payload-with-sources)
+* [Convert a payload](#convert-a-payload)
+* [Stream a payload or converted payload](#stream-a-payload-or-converted-payload)
+* [Queue a payload](#queue-a-payload)
+* [Check if a queued payload has been converted](#check-if-a-queued-payload-has-been-converted)
+* [Get converted payload from queue](#get-converted-payload-from-queue)
+* [Stream converted payload from queue](#stream-converted-payload-from-queue)
+
 [License](#license)
 
-<a name="docuementation"/>
+<a name="documentation"/>
 # Documentation
 The full documentation on Alfredo can be [found here](http://online-pdfconverter.nl/guide)
 
